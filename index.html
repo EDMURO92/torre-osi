@@ -95,15 +95,15 @@
                 🏢
             </div>
             <div>
-                <h1 class="text-xl md:text-2xl font-pixel text-[#ffbe3b] tracking-wide">Torre OSI The Game Powered by ClanJDT (Edgar Muñoz) and Gabriel Mesa Sanabria</h1>
-                <p class="text-xs md:text-sm text-[#38bdf8]">Simulador Tycoon de Redes v2.1</p>
+                <h1 class="text-xl md:text-2xl font-pixel text-[#ffbe3b] tracking-wide">Torre OSI The Game</h1>
+                <p class="text-xs md:text-sm text-[#38bdf8]">Simulador Auto-Tycoon v3.0 — Powered by ClanJDT (Edgar Muñoz) & Gabriel Mesa Sanabria</p>
             </div>
         </div>
 
         <div class="flex items-center space-x-4 md:space-x-8">
             <div class="bg-[#090511] px-3 py-1.5 border-2 border-[#ef4444] rounded text-center">
                 <span class="text-xs text-gray-400 block font-pixel">TIEMPO RESTANTE</span>
-                <span id="timer-display" class="text-xl md:text-2xl font-pixel text-[#ef4444] tracking-wider">05:00</span>
+                <span id="timer-display" class="text-xl md:text-2xl font-pixel text-[#ef4444] tracking-wider">04:00</span>
             </div>
 
             <div class="bg-[#090511] px-4 py-1.5 border-2 border-[#ffbe3b] rounded text-center min-w-[140px]">
@@ -123,8 +123,8 @@
         <!-- Canvas Building Display -->
         <section class="lg:col-span-8 bg-[#10081d] pixel-border p-2 flex flex-col items-center justify-start relative overflow-hidden min-h-[600px]">
             <div class="w-full flex justify-between items-center mb-2 px-2 border-b border-[#482a78] pb-1">
-                <span class="text-sm text-[#38bdf8] font-pixel">VISTA DE EDIFICIO DETALLADA (CAPAS 7 A 1)</span>
-                <span id="status-pill" class="text-xs px-2 py-0.5 bg-green-900 text-green-300 rounded font-mono">RED OPERATIVA</span>
+                <span class="text-sm text-[#38bdf8] font-pixel">VISTA DE EDIFICIO AUTOMÁTICO (CAPAS 7 A 1)</span>
+                <span id="status-pill" class="text-xs px-2 py-0.5 bg-green-900 text-green-300 rounded font-mono">AUTOMÁTICO ACTIVO</span>
             </div>
             
             <div id="canvas-container" class="relative w-full flex-1 flex justify-center items-center overflow-auto max-h-[760px]">
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <p id="supervisor-text" class="text-base text-gray-200 leading-snug font-mono bg-[#090511] p-2 border border-[#482a78] rounded min-h-[70px]">
-                    "¡Capa 7 (Aplicación) completamente reequipada! Procesa datos para generar créditos de red."
+                    "¡Los trabajadores mueven los paquetes solos! Presiona 'MÁS RÁPIDO' para acelerar la entrega y lograr completar las 7 capas antes de los 4 minutos."
                 </p>
             </div>
 
@@ -166,7 +166,7 @@
                     </div>
 
                     <div class="flex justify-between items-center bg-[#090511] p-2 border border-[#2b1847]">
-                        <span class="text-gray-400">Paquetes Procesados:</span>
+                        <span class="text-gray-400">Paquetes Entregados:</span>
                         <span id="stat-packets" class="font-mono text-yellow-400 text-base">0</span>
                     </div>
 
@@ -177,11 +177,11 @@
                 </div>
 
                 <div class="bg-[#24133e] p-2.5 border border-[#5c3593] text-xs text-gray-300 leading-relaxed">
-                    <p class="font-bold text-[#ffbe3b] mb-1 font-pixel text-[10px]">Guía Interactiva HD:</p>
+                    <p class="font-bold text-[#ffbe3b] mb-1 font-pixel text-[10px]">Modo Automático:</p>
                     <ul class="list-disc list-inside space-y-1">
-                        <li>Observa a los operarios trabajar y transportar paquetes en cada nivel.</li>
-                        <li>Haz clic en <span class="text-green-400 font-bold">PROCESAR</span> para enviar paquetes de datos.</li>
-                        <li>Usa <span class="text-cyan-400 font-bold">INFO</span> para aprender el funcionamiento exacto de cada protocolo.</li>
+                        <li>Los operarios recogen la caja en los servidores y la trasladan a la cinta.</li>
+                        <li>Usa <span class="text-green-400 font-bold">MÁS RÁPIDO</span> para acelerar el desplazamiento.</li>
+                        <li>Desbloquea las 7 capas para ganar antes de que expire el tiempo de 4 minutos.</li>
                     </ul>
                 </div>
             </div>
@@ -202,7 +202,7 @@
                 </div>
             </div>
 
-            <div class="space-y-2 text-sm font-mono max-h-[60vh] overflow-y-auto pr-2">
+            <div class="space-y-3 text-sm font-mono max-h-[60vh] overflow-y-auto pr-2">
                 <div>
                     <h4 class="text-xs font-pixel text-[#22c55e] mb-1">FUNCIÓN PRINCIPAL:</h4>
                     <p id="modal-desc" class="bg-[#090511] p-2 border border-[#482a78] text-gray-200 text-xs leading-relaxed"></p>
@@ -233,7 +233,7 @@
             <h2 id="game-over-title" class="text-xl font-pixel text-[#ffbe3b]">¡VICTORIA TOTAL!</h2>
             <div id="game-over-icon" class="text-5xl my-2">🏆</div>
             <p id="game-over-msg" class="text-sm font-mono text-gray-200 leading-relaxed bg-[#090511] p-3 border border-[#482a78]">
-                Has activado con éxito las 7 capas del modelo OSI antes de que se agotara el tiempo. ¡Has completado la transmisión de datos!
+                Has activado con éxito las 7 capas del modelo OSI antes de que se agotara el tiempo.
             </p>
             <button onclick="window.location.reload()" class="pixel-btn w-full py-3 font-pixel text-xs text-white bg-[#22c55e]">
                 REINICIAR JUEGO
@@ -292,7 +292,7 @@
                 } catch(e){}
             }
 
-            sfxProcess() { this.playTone(220, 'triangle', 0.15, 0.08); }
+            sfxProcess() { this.playTone(300, 'triangle', 0.12, 0.08); }
 
             sfxUnlock() {
                 if (!this.enabled) return;
@@ -341,7 +341,7 @@
                 english: "Presentation Layer",
                 icon: "🔒",
                 cost: 150,
-                baseReward: 40,
+                baseReward: 45,
                 color: "#f97316",
                 accent: "#fdba74",
                 pdu: "Datos Formateados",
@@ -355,7 +355,7 @@
                 english: "Session Layer",
                 icon: "🤝",
                 cost: 350,
-                baseReward: 65,
+                baseReward: 80,
                 color: "#eab308",
                 accent: "#fef08a",
                 pdu: "Datos de Sesión",
@@ -369,7 +369,7 @@
                 english: "Transport Layer",
                 icon: "🚚",
                 cost: 750,
-                baseReward: 100,
+                baseReward: 130,
                 color: "#22c55e",
                 accent: "#86efac",
                 pdu: "Segmento (TCP) / Datagrama (UDP)",
@@ -383,7 +383,7 @@
                 english: "Network Layer",
                 icon: "🌐",
                 cost: 1500,
-                baseReward: 160,
+                baseReward: 200,
                 color: "#38bdf8",
                 accent: "#bae6fd",
                 pdu: "Paquete (IP)",
@@ -397,7 +397,7 @@
                 english: "Data Link Layer",
                 icon: "🔗",
                 cost: 3000,
-                baseReward: 250,
+                baseReward: 320,
                 color: "#a855f7",
                 accent: "#d8b4fe",
                 pdu: "Trama (Frame)",
@@ -411,7 +411,7 @@
                 english: "Physical Layer",
                 icon: "⚡",
                 cost: 6000,
-                baseReward: 400,
+                baseReward: 500,
                 color: "#ec4899",
                 accent: "#fbcfe8",
                 pdu: "Bits (0s y 1s)",
@@ -423,20 +423,25 @@
 
         const gameState = {
             coins: 100,
-            timeLeft: 300,
+            timeLeft: 240, // 4 Minutos exactamente
             timerInterval: null,
             unlockedLayerCount: 1,
             totalPacketsProcessed: 0,
             throughputKbps: 0,
+            isGameOver: false,
             layersState: OSI_LAYERS.map((layer, index) => ({
                 ...layer,
                 unlocked: index === 0,
-                processing: false,
-                processProgress: 0,
+                speedLevel: 1,
+                speedCost: 50 * (index + 1),
                 workerFrame: Math.random() * 10,
-                workerX: 280 + Math.random() * 100,
-                workerDir: Math.random() > 0.5 ? 1 : -1,
-                packetX: -1
+                workerX: 200,
+                targetX: 680,
+                minX: 200,
+                maxX: 680,
+                workerDir: 1, // 1: moviéndose a la derecha (llevando caja), -1: regresando vacio
+                hasBox: true,
+                speed: 1.8
             })),
             floatingTexts: []
         };
@@ -461,8 +466,16 @@
             drawPixelRect(x + 8, y + 16, 12, 18, "#ffffff");
 
             if (carryingBox) {
+                // Manos sosteniendo caja
                 drawPixelRect(x - 2, y + 18, 8, 6, shirtColor);
                 drawPixelRect(x + 22, y + 18, 8, 6, shirtColor);
+                
+                // Dibujar caja transportada
+                drawPixelRect(x + 2, y + 10, 24, 18, "#d97706");
+                drawPixelRect(x + 5, y + 13, 18, 12, "#f59e0b");
+                ctx.fillStyle = "#000";
+                ctx.font = "bold 9px 'VT323'";
+                ctx.fillText("DATA", x + 6, y + 22);
             } else {
                 const armOffset = (f % 2 === 0 ? 2 : -2);
                 drawPixelRect(x + 1, y + 18 + armOffset, 5, 12, shirtColor);
@@ -485,23 +498,10 @@
             drawPixelRect(x + 135, y + 12, 50, 32, "#1e293b");
             drawPixelRect(x + 138, y + 15, 44, 26, "#0284c7");
             drawPixelRect(x + 140, y + 17, 40, 6, "#38bdf8");
-            drawPixelRect(x + 142, y + 26, 15, 12, "#fde047");
-            drawPixelRect(x + 160, y + 26, 18, 2, "#ffffff");
-            drawPixelRect(x + 160, y + 30, 18, 2, "#ffffff");
-
-            drawPixelRect(x + 360, y + 45, 90, 8, "#64748b");
-            drawPixelRect(x + 370, y + 53, 10, 35, "#334155");
-            drawPixelRect(x + 430, y + 53, 10, 35, "#334155");
-
-            drawPixelRect(x + 380, y + 12, 50, 32, "#1e293b");
-            drawPixelRect(x + 383, y + 15, 44, 26, "#15803d");
-            drawPixelRect(x + 395, y + 20, 20, 14, "#ffffff");
-            drawPixelRect(x + 397, y + 22, 16, 2, "#ef4444");
 
             ctx.fillStyle = "#ffffff";
             ctx.font = "bold 11px 'Press Start 2P'";
-            ctx.fillText("WEB / HTTP", x + 125, y + 8);
-            ctx.fillText("E-MAIL / SMTP", x + 355, y + 8);
+            ctx.fillText("WEB/HTTP", x + 125, y + 8);
         }
 
         function drawServerRackHD(x, y, color) {
@@ -533,12 +533,53 @@
             drawPixelRect(x + width - 8, y - 2, 14, 18, "#64748b");
         }
 
+        function updateGameLogic() {
+            if (gameState.isGameOver) return;
+
+            gameState.layersState.forEach((layer, idx) => {
+                if (!layer.unlocked) return;
+
+                layer.workerFrame += 0.15 * layer.speedLevel;
+                layer.workerX += layer.workerDir * layer.speed;
+
+                // Al llegar a la cinta transportadora (Derecha) -> Deja la caja y genera dinero
+                if (layer.workerDir === 1 && layer.workerX >= layer.maxX) {
+                    layer.workerDir = -1;
+                    layer.hasBox = false;
+
+                    gameState.coins += layer.baseReward;
+                    gameState.totalPacketsProcessed += 1;
+                    gameState.throughputKbps += Math.floor(layer.baseReward * 1.2);
+                    audio.sfxCoin();
+
+                    const fy = 50 + (idx * 165);
+                    gameState.floatingTexts.push({
+                        text: `+🪙${layer.baseReward}`,
+                        x: 710,
+                        y: fy + 60,
+                        alpha: 1.0,
+                        color: "#22c55e"
+                    });
+
+                    updateUI();
+                }
+
+                // Al llegar de vuelta a los servidores (Izquierda) -> Toma una nueva caja
+                if (layer.workerDir === -1 && layer.workerX <= layer.minX) {
+                    layer.workerDir = 1;
+                    layer.hasBox = true;
+                }
+            });
+        }
+
         function renderGame() {
+            updateGameLogic();
+
             ctx.fillStyle = "#090511";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             const floorHeight = 165;
-            const startY = 50; // Margen superior corregido
+            const startY = 50;
 
             gameState.layersState.forEach((layer, idx) => {
                 const fy = startY + (idx * floorHeight);
@@ -551,7 +592,6 @@
                 ctx.lineWidth = 4;
                 ctx.strokeRect(40, fy, 920, floorHeight - 15);
 
-                // Banner de título ajustado a 36px para evitar cortes
                 ctx.fillStyle = isUnlocked ? layer.color : "#2b1847";
                 ctx.fillRect(40, fy, 320, 36);
                 
@@ -567,55 +607,35 @@
                         drawServerRackHD(120, fy + 45, layer.color);
                     }
 
-                    drawConveyorHD(200, fy + 115, 520);
+                    drawConveyorHD(680, fy + 115, 50);
 
-                    layer.workerFrame += 0.12;
-                    if (layer.processing) {
-                        layer.workerX += layer.workerDir * 1.5;
-                        if (layer.workerX > 620 || layer.workerX < 220) layer.workerDir *= -1;
-                    }
-                    
                     drawWorkerSprite(
                         layer.workerX, 
                         fy + 68, 
                         layer.workerFrame, 
                         layer.color, 
-                        layer.processing
+                        layer.hasBox
                     );
 
-                    if (layer.processing && layer.packetX >= 0) {
-                        drawPixelRect(layer.packetX, fy + 88, 30, 24, layer.color);
-                        drawPixelRect(layer.packetX + 3, fy + 91, 24, 18, "#ffffff");
-                        ctx.fillStyle = "#000000";
-                        ctx.font = "bold 12px 'VT323'";
-                        ctx.fillText("DATA", layer.packetX + 5, fy + 104);
+                    // Botón para procesar MÁS RÁPIDO (Acelerar trabajador)
+                    const speedBtnX = 745;
+                    const speedBtnY = fy + 35;
+                    const canAffordSpeed = gameState.coins >= layer.speedCost;
 
-                        if (Math.random() > 0.4) {
-                            drawPixelRect(layer.packetX - 6, fy + 88 + Math.random()*18, 5, 5, layer.accent);
-                        }
-                    }
-
-                    const btnX = 745;
-                    const btnY = fy + 40;
-                    ctx.fillStyle = layer.processing ? "#2b1847" : "#22c55e";
-                    ctx.fillRect(btnX, btnY, 195, 45);
+                    ctx.fillStyle = canAffordSpeed ? "#22c55e" : "#334155";
+                    ctx.fillRect(speedBtnX, speedBtnY, 195, 48);
                     ctx.strokeStyle = "#ffffff";
                     ctx.lineWidth = 3;
-                    ctx.strokeRect(btnX, btnY, 195, 45);
+                    ctx.strokeRect(speedBtnX, speedBtnY, 195, 48);
 
-                    ctx.fillStyle = layer.processing ? "#aaaaaa" : "#000000";
-                    ctx.font = "bold 12px 'Press Start 2P'";
-                    ctx.fillText(layer.processing ? "PROCESANDO" : "PROCESAR", btnX + 22, btnY + 28);
+                    ctx.fillStyle = canAffordSpeed ? "#000000" : "#94a3b8";
+                    ctx.font = "bold 10px 'Press Start 2P'";
+                    ctx.fillText("MÁS RÁPIDO", speedBtnX + 35, speedBtnY + 22);
+                    ctx.fillText(`🪙 ${layer.speedCost} (Nvl ${layer.speedLevel})`, speedBtnX + 25, speedBtnY + 38);
 
-                    if (layer.processing) {
-                        ctx.fillStyle = "#090511";
-                        ctx.fillRect(btnX, btnY + 52, 195, 12);
-                        ctx.fillStyle = layer.color;
-                        ctx.fillRect(btnX, btnY + 52, (layer.processProgress / 100) * 195, 12);
-                    }
-
+                    // Botón Info
                     const infoX = 745;
-                    const infoY = fy + 98;
+                    const infoY = fy + 95;
                     ctx.fillStyle = "#38bdf8";
                     ctx.fillRect(infoX, infoY, 195, 36);
                     ctx.strokeStyle = "#ffffff";
@@ -649,8 +669,8 @@
                         ctx.strokeRect(buyBtnX, buyBtnY, 195, 50);
 
                         ctx.fillStyle = canAfford ? "#000000" : "#94a3b8";
-                        ctx.font = "bold 12px 'Press Start 2P'";
-                        ctx.fillText("COMPRAR", buyBtnX + 45, buyBtnY + 31);
+                        ctx.font = "bold 11px 'Press Start 2P'";
+                        ctx.fillText("COMPRAR CAPA", buyBtnX + 20, buyBtnY + 31);
                     } else {
                         ctx.fillStyle = "#64748b";
                         ctx.font = "bold 16px 'VT323'";
@@ -661,7 +681,7 @@
 
             gameState.floatingTexts.forEach((ft, i) => {
                 ctx.fillStyle = ft.color || "#ffbe3b";
-                ctx.font = "bold 18px 'Press Start 2P'";
+                ctx.font = "bold 16px 'Press Start 2P'";
                 ctx.fillText(ft.text, ft.x, ft.y);
                 ft.y -= 1.2;
                 ft.alpha -= 0.02;
@@ -672,6 +692,8 @@
         }
 
         canvas.addEventListener('click', (e) => {
+            if (gameState.isGameOver) return;
+
             const rect = canvas.getBoundingClientRect();
             const scaleX = canvas.width / rect.width;
             const scaleY = canvas.height / rect.height;
@@ -685,13 +707,16 @@
                 const fy = startY + (idx * floorHeight);
 
                 if (layer.unlocked) {
-                    if (clickX >= 745 && clickX <= 940 && clickY >= fy + 40 && clickY <= fy + 85) {
-                        startProcessingLayer(idx);
+                    // Clic en Botón MÁS RÁPIDO
+                    if (clickX >= 745 && clickX <= 940 && clickY >= fy + 35 && clickY <= fy + 83) {
+                        upgradeSpeed(idx);
                     }
-                    if (clickX >= 745 && clickX <= 940 && clickY >= fy + 98 && clickY <= fy + 134) {
+                    // Clic en Botón INFO
+                    if (clickX >= 745 && clickX <= 940 && clickY >= fy + 95 && clickY <= fy + 131) {
                         openInfoModal(layer);
                     }
                 } else if (idx === gameState.unlockedLayerCount) {
+                    // Clic en COMPRAR CAPA
                     if (clickX >= 745 && clickX <= 940 && clickY >= fy + 50 && clickY <= fy + 100) {
                         unlockLayer(idx);
                     }
@@ -699,62 +724,85 @@
             });
         });
 
-        function startProcessingLayer(index) {
+        function upgradeSpeed(index) {
             const layer = gameState.layersState[index];
-            if (layer.processing) return;
+            if (gameState.coins >= layer.speedCost) {
+                gameState.coins -= layer.speedCost;
+                layer.speedLevel += 1;
+                layer.speed += 0.8;
+                layer.speedCost = Math.floor(layer.speedCost * 1.8);
+                audio.sfxProcess();
 
-            layer.processing = true;
-            layer.processProgress = 0;
-            layer.packetX = 200;
-            audio.sfxProcess();
+                const fy = 50 + (index * 165);
+                gameState.floatingTexts.push({
+                    text: "⚡ ¡MÁS RÁPIDO!",
+                    x: 745,
+                    y: fy + 30,
+                    alpha: 1.0,
+                    color: "#ffbe3b"
+                });
 
-            const interval = setInterval(() => {
-                layer.processProgress += 5;
-                layer.packetX += 26;
-
-                if (layer.processProgress >= 100) {
-                    clearInterval(interval);
-                    layer.processing = false;
-                    layer.packetX = -1;
-
-                    const reward = layer.baseReward;
-                    gameState.coins += reward;
-                    gameState.totalPacketsProcessed += 1;
-                    gameState.throughputKbps += Math.floor(reward * 1.5);
-                    
-                    audio.sfxCoin();
-                    updateHUD();
-
-                    const fy = 50 + (index * 165);
-                    gameState.floatingTexts.push({
-                        text: `+🪙${reward}`,
-                        x: 770,
-                        y: fy + 40,
-                        color: "#ffbe3b",
-                        alpha: 1
-                    });
-                }
-            }, 50);
+                updateUI();
+            }
         }
 
         function unlockLayer(index) {
             const layer = gameState.layersState[index];
-            if (gameState.coins >= layer.cost) {
+            if (gameState.coins >= layer.cost && !layer.unlocked) {
                 gameState.coins -= layer.cost;
                 layer.unlocked = true;
-                gameState.unlockedLayerCount++;
-                
+                gameState.unlockedLayerCount += 1;
+
                 audio.sfxUnlock();
-                updateHUD();
-                setSupervisorText(layer.dialogue);
+                document.getElementById('supervisor-text').textContent = layer.dialogue;
+
+                const fy = 50 + (index * 165);
+                gameState.floatingTexts.push({
+                    text: "¡CAPA COMPLETADA!",
+                    x: 350,
+                    y: fy + 80,
+                    alpha: 1.0,
+                    color: "#22c55e"
+                });
+
+                updateUI();
 
                 if (gameState.unlockedLayerCount === 7) {
-                    triggerVictory();
+                    setTimeout(showVictory, 500);
                 }
-            } else {
-                setSupervisorText(`¡Necesitas 🪙 ${layer.cost} créditos para desbloquear la Capa ${layer.number} (${layer.name})!`);
-                audio.sfxClick();
             }
+        }
+
+        function updateUI() {
+            document.getElementById('coins-display').textContent = `🪙 ${gameState.coins}`;
+            document.getElementById('stat-unlocked').textContent = `${gameState.unlockedLayerCount} / 7`;
+            document.getElementById('stat-throughput').textContent = `${gameState.throughputKbps} Kbps`;
+            document.getElementById('stat-packets').textContent = `${gameState.totalPacketsProcessed}`;
+
+            const dotsContainer = document.getElementById('layer-dots');
+            dotsContainer.innerHTML = '';
+            gameState.layersState.forEach(layer => {
+                const dot = document.createElement('div');
+                dot.className = `w-3 h-3 rounded-full border border-black ${layer.unlocked ? 'bg-green-500' : 'bg-gray-700'}`;
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function startTimer() {
+            gameState.timerInterval = setInterval(() => {
+                if (gameState.isGameOver) return;
+
+                gameState.timeLeft--;
+                const minutes = Math.floor(gameState.timeLeft / 60);
+                const seconds = gameState.timeLeft % 60;
+                document.getElementById('timer-display').textContent = 
+                    `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+                if (gameState.timeLeft <= 0) {
+                    clearInterval(gameState.timerInterval);
+                    showGameOver();
+                }
+            }, 1000);
         }
 
         function openInfoModal(layer) {
@@ -769,7 +817,7 @@
             protoContainer.innerHTML = '';
             layer.protocols.forEach(p => {
                 const tag = document.createElement('span');
-                tag.className = 'px-2 py-0.5 bg-[#2b1847] border border-[#38bdf8] text-[#38bdf8] text-xs font-mono rounded';
+                tag.className = 'px-2 py-1 bg-[#2b1847] border border-[#38bdf8] text-[#38bdf8] text-xs font-mono rounded';
                 tag.textContent = p;
                 protoContainer.appendChild(tag);
             });
@@ -779,74 +827,35 @@
 
         document.getElementById('close-modal').addEventListener('click', () => {
             document.getElementById('info-modal').classList.add('hidden');
-            audio.sfxClick();
         });
         document.getElementById('modal-ok-btn').addEventListener('click', () => {
             document.getElementById('info-modal').classList.add('hidden');
-            audio.sfxClick();
         });
 
-        function updateHUD() {
-            document.getElementById('coins-display').textContent = `🪙 ${gameState.coins}`;
-            document.getElementById('stat-unlocked').textContent = `${gameState.unlockedLayerCount} / 7`;
-            document.getElementById('stat-throughput').textContent = `${gameState.throughputKbps} Kbps`;
-            document.getElementById('stat-packets').textContent = gameState.totalPacketsProcessed;
-
-            const dotsContainer = document.getElementById('layer-dots');
-            dotsContainer.innerHTML = '';
-            gameState.layersState.forEach(l => {
-                const dot = document.createElement('div');
-                dot.className = `w-3 h-3 rounded-full border border-black ${l.unlocked ? 'bg-green-400' : 'bg-gray-700'}`;
-                dotsContainer.appendChild(dot);
-            });
-        }
-
-        function setSupervisorText(text) {
-            document.getElementById('supervisor-text').textContent = `"${text}"`;
-        }
-
-        function startTimer() {
-            gameState.timerInterval = setInterval(() => {
-                gameState.timeLeft--;
-                const minutes = Math.floor(gameState.timeLeft / 60);
-                const seconds = gameState.timeLeft % 60;
-                document.getElementById('timer-display').textContent = 
-                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
-                if (gameState.timeLeft <= 0) {
-                    clearInterval(gameState.timerInterval);
-                    triggerGameOver(false);
-                }
-            }, 1000);
-        }
-
-        function triggerVictory() {
+        function showVictory() {
+            gameState.isGameOver = true;
             clearInterval(gameState.timerInterval);
             audio.sfxFanfare();
             document.getElementById('game-over-title').textContent = "¡VICTORIA TOTAL!";
             document.getElementById('game-over-title').className = "text-xl font-pixel text-[#22c55e]";
             document.getElementById('game-over-icon').textContent = "🏆";
-            document.getElementById('game-over-msg').textContent = 
-                `¡Felicidades, Ingeniero! Has activado con éxito las 7 capas del modelo OSI en el edificio. La encapsulación de datos se ha completado perfectamente antes del límite de 5 minutos.`;
+            document.getElementById('game-over-msg').textContent = "¡Felicitaciones! Has completado la transmisión en las 7 capas del modelo OSI dentro del tiempo límite de 4 minutos, la ultima capa combierte los datos a lenguaje binario.";
             document.getElementById('game-over-modal').classList.remove('hidden');
         }
 
-        function triggerGameOver(win) {
-            if (!win) {
-                document.getElementById('game-over-title').textContent = "¡TIEMPO AGOTADO!";
-                document.getElementById('game-over-title').className = "text-xl font-pixel text-[#ef4444]";
-                document.getElementById('game-over-icon').textContent = "💥";
-                document.getElementById('game-over-msg').textContent = 
-                    `Se agotó el tiempo de 5 minutos antes de completar las 7 capas del modelo OSI. La transmisión de datos colapsó. ¡Inténtalo de nuevo!`;
-                document.getElementById('game-over-modal').classList.remove('hidden');
-            }
+        function showGameOver() {
+            gameState.isGameOver = true;
+            document.getElementById('game-over-title').textContent = "¡HAS PERDIDO!";
+            document.getElementById('game-over-title').className = "text-xl font-pixel text-[#ef4444]";
+            document.getElementById('game-over-icon').textContent = "⏳";
+            document.getElementById('game-over-msg').textContent = "El tiempo límite de 4 minutos se ha agotado antes de completar las 7 capas. El juego se va a reiniciar para intentarlo de nuevo.";
+            document.getElementById('game-over-modal').classList.remove('hidden');
         }
 
-        window.onload = () => {
-            updateHUD();
-            startTimer();
-            renderGame();
-        };
+        // Inicialización
+        updateUI();
+        startTimer();
+        requestAnimationFrame(renderGame);
     </script>
 </body>
 </html>
